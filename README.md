@@ -1,17 +1,10 @@
-![tailwind-nextjs-banner](/public/static/images/twitter-card.png)
+![tailwind-nextjs-banner](/public/static/photos/trolltunga.JPG)
 
-# Tailwind Nextjs Starter Blog
+# My Portfolio/Blog
 
-[![GitHub Repo stars](https://img.shields.io/github/stars/timlrx/tailwind-nextjs-starter-blog?style=social)](https://GitHub.com/timlrx/tailwind-nextjs-starter-blog/stargazers/)
-[![GitHub forks](https://img.shields.io/github/forks/timlrx/tailwind-nextjs-starter-blog?style=social)](https://GitHub.com/timlrx/tailwind-nextjs-starter-blog/network/)
-[![Twitter URL](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2Ftimlrxx)](https://twitter.com/timlrxx)
-[![Sponsor](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&link=https://github.com/sponsors/timlrx)](https://github.com/sponsors/timlrx)
+A simple portfolio site, built in [Next.js](https://nextjs.org/), [Tailwind CSS](https://tailwindcss.com/) - using this great [blogging starter template](https://github.com/timlrx/tailwind-nextjs-starter-blog).
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/timlrx/tailwind-nextjs-starter-blog)
-
-My simple portfolio site, built in [Next.js](https://nextjs.org/), [Tailwind CSS](https://tailwindcss.com/) - using this great [blogging starter template](https://github.com/timlrx/tailwind-nextjs-starter-blog).
-
-### Features (Mentioned in the parent repo but thought I would metnion again.)
+#### Features (Mentioned in the parent repo but wanted to highlight.)
 
 - Easy styling customization with [Tailwind 3.0](https://tailwindcss.com/blog/tailwindcss-v3) and primary color attribute
 - Near perfect lighthouse score - [Lighthouse report](https://www.webpagetest.org/result/210111_DiC1_08f3670c3430bf4a9b76fc3b927716c5/)
@@ -37,20 +30,14 @@ My simple portfolio site, built in [Next.js](https://nextjs.org/), [Tailwind CSS
 - Preconfigured security headers
 - SEO friendly with RSS feed, sitemaps and more!
 
-## Quick Start Guide
-
-5. Modify `projectsData.js`
-6. Modify `headerNavLinks.js` to customize navigation links
-7. Add blog posts
-8. Deploy on Vercel
-
-### Todo
+### Current Todo list
 
 - [ ] Update avatar image
 - [ ] Add icons
 - [ ] Add analytics
 - [ ] Remove boilerplate content
 - [ ] Integrate or remove chat
+- [ ] Add newsletter/mail configuration
 
 ## Installation
 
@@ -89,8 +76,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 `components/MDXComponents.js` - pass your own JSX code or React component by specifying it over here. You can then call them directly in the `.mdx` or `.md` file. By default, a custom link and image component is passed.
 
 `layouts` - main templates used in pages.
-
-`pages` - pages to route to. Read the [Next.js documentation](https://nextjs.org/docs) for more information.
 
 `next.config.js` - configuration related to Next.js. You need to adapt the Content Security Policy if you want to load scripts, images etc. from other domains.
 
