@@ -50,7 +50,7 @@ My simple portfolio site, built in [Next.js](https://nextjs.org/), [Tailwind CSS
 - [ ] Add icons
 - [ ] Add analytics
 - [ ] Remove boilerplate content
-- [ ] Add photos
+- [ ] Integrate or remove chat
 
 ## Installation
 
@@ -74,17 +74,7 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
 ## Extend / Customize
-
-`data/siteMetadata.js` - contains most of the site related information which should be modified for a user's need.
-
-`data/authors/default.md` - default author information (required). Additional authors can be added as files in `data/authors`.
-
-`data/projectsData.js` - data used to generate styled card on the projects page.
-
-`data/headerNavLinks.js` - navigation links.
 
 `data/logo.svg` - replace with your own logo.
 
@@ -95,8 +85,6 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 `tailwind.config.js` and `css/tailwind.css` - contain the tailwind stylesheet which can be modified to change the overall look and feel of the site.
 
 `css/prism.css` - controls the styles associated with the code blocks. Feel free to customize it and use your preferred prismjs theme e.g. [prism themes](https://github.com/PrismJS/prism-themes).
-
-`components/social-icons` - to add other icons, simply copy an svg file from [Simple Icons](https://simpleicons.org/) and map them in `index.js`. Other icons use [heroicons](https://heroicons.com/).
 
 `components/MDXComponents.js` - pass your own JSX code or React component by specifying it over here. You can then call them directly in the `.mdx` or `.md` file. By default, a custom link and image component is passed.
 
@@ -160,10 +148,6 @@ As the template uses `next/image` for image optimization, additional configurati
 
 The API routes used in the newsletter component cannot be used in a static site export. You will need to use a form API endpoint provider and substitute the route in the newsletter component accordingly. Other hosting platforms such as Netlify also offer alternative solutions - please refer to their docs for more information.
 
-## Support
+## Credit
 
-Using the template? Support this effort by giving a star on GitHub, sharing your own blog and giving a shoutout on Twitter or becoming a project [sponsor](https://github.com/sponsors/timlrx).
-
-## Licence
-
-[MIT](https://github.com/timlrx/tailwind-nextjs-starter-blog/blob/master/LICENSE) © [Timothy Lin](https://www.timrlx.com)
+Using the template? [Support the parent repo that made this blog possible](https://github.com/timlrx/tailwind-nextjs-starter-blog) by by giving a star on GitHub, and giving a shoutout on Twitter or becoming a project [sponsor](https://github.com/sponsors/timlrx).
