@@ -36,7 +36,11 @@ A simple portfolio site, built in [Next.js](https://nextjs.org/), [Tailwind CSS]
 - [ ] Add icons
 - [ ] Add analytics
 - [ ] Remove boilerplate content
-- [ ] Add newsletter/mail configuration
+- [ ] Remove newsletter
+- [ ] Remove comments
+- [ ] Add color themes
+- [ ] Redo layouts
+- [ ] Reviews/reading notes pages
 
 ## Installation
 
@@ -64,21 +68,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 `data/logo.svg` - replace with your own logo.
 
-`data/blog` - replace with your own blog posts.
-
-`public/static` - store assets such as images and favicons.
-
-`tailwind.config.js` and `css/tailwind.css` - contain the tailwind stylesheet which can be modified to change the overall look and feel of the site.
-
-`css/prism.css` - controls the styles associated with the code blocks. Feel free to customize it and use your preferred prismjs theme e.g. [prism themes](https://github.com/PrismJS/prism-themes).
-
 `components/MDXComponents.js` - pass your own JSX code or React component by specifying it over here. You can then call them directly in the `.mdx` or `.md` file. By default, a custom link and image component is passed.
-
-`layouts` - main templates used in pages.
-
-`next.config.js` - configuration related to Next.js. You need to adapt the Content Security Policy if you want to load scripts, images etc. from other domains.
-
-## Post
 
 ### Frontmatter
 
@@ -126,8 +116,6 @@ Follow the interactive prompt to generate a post with pre-filled front matter.
 
 **Vercel**  
 The easiest way to deploy the template is to use the [Vercel Platform](https://vercel.com) from the creators of Next.js. Check out the [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
-The API routes used in the newsletter component cannot be used in a static site export. You will need to use a form API endpoint provider and substitute the route in the newsletter component accordingly. Other hosting platforms such as Netlify also offer alternative solutions - please refer to their docs for more information.
 
 ## Credit
 
