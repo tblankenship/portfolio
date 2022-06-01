@@ -19,21 +19,6 @@ First load JS decreased from 43kB to 39kB despite all the new features added!^[W
 
 See [upgrade guide](#upgrade-guide) below if you are migrating from v0 version of the template.
 
-## Theme colors
-
-You can easily modify the theme color by changing the primary attribute in the tailwind config file:
-
-```js:tailwind.config.js
-theme: {
-    colors: {
-      primary: colors.teal,
-      gray: colors.neutral,
-      ...
-    }
-  ...
-}
-```
-
 The primary color attribute should be assigned an object with keys from 50, 100, 200 ... 900 and the corresponding color code values.
 
 Tailwind includes great default color palettes that can be used for theming your own website. Check out [customizing colors documentation page](https://tailwindcss.com/docs/customizing-colors) for the full range of options.
