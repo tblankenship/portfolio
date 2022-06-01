@@ -1,7 +1,7 @@
 const siteMetadata = {
-  title: 'Thaddeus Blankenship - dev',
+  title: 'Thaddeus Blankenship',
   author: 'Thaddeus Blankenship',
-  headerTitle: "Thad's dev blog",
+  headerTitle: 'TB',
   description: 'A personal blog created with Next.js and Tailwind.css',
   language: 'en-us',
   theme: 'system', // system, dark or light
