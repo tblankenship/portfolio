@@ -39,11 +39,18 @@ My simple portfolio site, built in [Next.js](https://nextjs.org/), [Tailwind CSS
 
 ## Quick Start Guide
 
-4. Personalize `authors/default.md` (main author)
 5. Modify `projectsData.js`
 6. Modify `headerNavLinks.js` to customize navigation links
 7. Add blog posts
 8. Deploy on Vercel
+
+### Todo
+
+- [ ] Update avatar image
+- [ ] Add icons
+- [ ] Add analytics
+- [ ] Remove boilerplate content
+- [ ] Add photos
 
 ## Installation
 

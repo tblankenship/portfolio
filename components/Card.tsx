@@ -1,7 +1,14 @@
 import Image from './Image'
 import Link from './Link'
 
-const Card = ({ title, description, imgSrc, href }) => (
+interface Props {
+  title: string
+  description: string
+  imgSrc: string
+  href?: string
+}
+
+const Card = ({ title, description, imgSrc, href }: Props) => (
   <div className="md p-4 md:w-1/2" style={{ maxWidth: '544px' }}>
     <div
       className={`${
