@@ -128,11 +128,8 @@ Follow the interactive prompt to generate a post with pre-filled front matter.
 **Vercel**  
 The easiest way to deploy the template is to use the [Vercel Platform](https://vercel.com) from the creators of Next.js. Check out the [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-**Netlify / GitHub Pages / Firebase etc.**  
-As the template uses `next/image` for image optimization, additional configurations have to be made to deploy on other popular static hosting websites like [Netlify](https://www.netlify.com/) or [GitHub Pages](https://pages.github.com/). An alternative image optimization provider such as Imgix, Cloudinary or Akamai has to be used. Alternatively, replace the `next/image` component with a standard `<img>` tag. See [`next/image` documentation](https://nextjs.org/docs/basic-features/image-optimization) for more details.
-
 The API routes used in the newsletter component cannot be used in a static site export. You will need to use a form API endpoint provider and substitute the route in the newsletter component accordingly. Other hosting platforms such as Netlify also offer alternative solutions - please refer to their docs for more information.
 
 ## Credit
 
-Using the template? [Support the parent repo that made this blog possible](https://github.com/timlrx/tailwind-nextjs-starter-blog) by by giving a star on GitHub, and giving a shoutout on Twitter or becoming a project [sponsor](https://github.com/sponsors/timlrx).
+Like the blog? [Support the parent repo that made this blog possible](https://github.com/timlrx/tailwind-nextjs-starter-blog) by by giving a star on GitHub, and giving a shoutout on Twitter or becoming a project [sponsor](https://github.com/sponsors/timlrx).
