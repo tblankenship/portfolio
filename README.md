@@ -32,14 +32,12 @@ A simple portfolio site, built in [Next.js](https://nextjs.org/), [Tailwind CSS]
 
 ### Current Todo list
 
-- [ ] Update logos
 - [ ] New pop-out modal component for images
 - [ ] Add color themes / change layouts
 - [ ] Reviews/reading notes pages
 - [ ] Dynamic Resume
 - [ ] Japanese Study Integration
-- [ ] Real URL hosting
--
+- [ ] Update logos
 
 ## Installation
 
