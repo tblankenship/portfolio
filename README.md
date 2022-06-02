@@ -32,12 +32,9 @@ A simple portfolio site, built in [Next.js](https://nextjs.org/), [Tailwind CSS]
 
 ### Current Todo list
 
-- [ ] Add icons
-- [ ] Add analytics
-- [ ] Remove boilerplate content
+- [ ] Update logos
 - [ ] New pop-out modal component for images
-- [ ] Add color themes
-- [ ] Redo layouts
+- [ ] Add color themes / change layouts
 - [ ] Reviews/reading notes pages
 
 ## Installation
@@ -63,8 +60,6 @@ npm run dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Extend / Customize
-
-`data/logo.svg` - replace with your own logo.
 
 `components/MDXComponents.js` - pass your own JSX code or React component by specifying it over here. You can then call them directly in the `.mdx` or `.md` file. By default, a custom link and image component is passed.
 
