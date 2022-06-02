@@ -36,8 +36,7 @@ A simple portfolio site, built in [Next.js](https://nextjs.org/), [Tailwind CSS]
 - [ ] Add icons
 - [ ] Add analytics
 - [ ] Remove boilerplate content
-- [ ] Remove newsletter
-- [ ] Remove comments
+- [ ] New pop-out modal component for images
 - [ ] Add color themes
 - [ ] Redo layouts
 - [ ] Reviews/reading notes pages

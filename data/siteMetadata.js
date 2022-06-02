@@ -9,7 +9,7 @@ const siteMetadata = {
   siteRepo: 'https://github.com/tblankenship/portfolio',
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avatar.png',
-  socialBanner: '/static/images/twitter-card.png',
+  socialBanner: '/static/images/twitter-card.jpg',
   email: 'thaddeusblankenship@gmail.com',
   github: 'https://github.com/tblankenship',
   linkedin: 'https://www.linkedin.com/in/thaddeusb',
