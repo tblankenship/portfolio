@@ -32,7 +32,6 @@ A simple portfolio site, built in [Next.js](https://nextjs.org/), [Tailwind CSS]
 
 ### Current Todo list
 
-- [ ] Update avatar image
 - [ ] Add icons
 - [ ] Add analytics
 - [ ] Remove boilerplate content
