@@ -2,7 +2,8 @@ const siteMetadata = {
   title: 'Thaddeus Blankenship',
   author: 'Thaddeus Blankenship',
   headerTitle: 'TB',
-  description: 'A personal blog created with Next.js and Tailwind.css',
+  description: 'My personal blog',
+  header: "What's been going on recently.",
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://tblankenship.dev',

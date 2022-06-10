@@ -1,0 +1,103 @@
+---
+title: 'Sliding Window Algorithms'
+date: 2022-06-09T20:00:14Z
+lastmod: '2022-06-09'
+tags: ['algorithms', 'data-structures', 'javascript']
+draft: false
+summary: 'A look into sublists'
+---
+
+## Intro
+
+The sliding window approach is a pretty simple algorithm to handle calculating data within a sublist.
+
+## Ex 1:
+
+Given a list of numbers, find the largest sum of any sublist.
+
+```javascript
+const max_sub_array_of_size_k = function (k, arr) {
+  let max = 0, // max sum of sublist of size k
+    current = 0, // current sum of sublist of size k
+    start = 0 // start position of the sublist (or window)
+
+  for (end = 0; end < arr.length; end++) {
+    current += arr[end] // First, add the current element to the current sum
+
+    if (end >= k - 1) {
+      // If the window is full, then we can calculate the max sum
+      max = Math.max(max, current)
+      current -= arr[start] // Subtract the first element of the window
+      start++ // Move the start position of the window
+    }
+  }
+  return max
+}
+```
+
+Complexity: O(n)
+
+---
+
+## Ex 2:
+
+Given an array of positive numbers, find the smallest subarray with a sum greater or equal to a given value.
+
+```javascript
+const smallest_subarray_sum = function (s, arr) {
+  let minLength = Infinity,
+    start = 0, // start position of the sublist (or window)
+    total = 0 // current sum of sublist
+
+  for (end = 0; end < arr.length; end++) {
+    total += arr[end] // First, add the current element to the current sum
+    // We want this to be a while loop so we go through every item in the array.
+    while (total >= s) {
+      minLength = Math.min(minLength, end - start + 1) // Array width is the window end (end) - the start, plus 1 (to get the actual length between two indices)
+      total -= arr[start] // Subtract the first element of the window so we can slide the window over
+      start++ // Move the start position of the window
+    }
+  }
+  if (minLength === Infinity) {
+    minLength = 0
+  }
+  return minLength
+}
+```
+
+Complexity: O(n)
+
+---
+
+## Ex 3:
+
+Find the longest substring with no more than K distinct characters.
+
+```javascript
+const longest_substring_with_k_distinct = function (str, k) {
+  let start = 0,
+    maxLength = 0,
+    charMap = {}
+
+  for (let end = 0; end < str.length; end++) {
+    const rightChar = str[end]
+    if (!(rightChar in charMap)) {
+      charMap[rightChar] = 0
+    }
+    charMap[rightChar] += 1
+
+    // Only start removing characters from the start if the length is more than the max
+    while (Object.keys(charMap).length > k) {
+      const leftChar = str[start]
+      charMap[leftChar] -= 1
+      if (charMap[leftChar] === 0) {
+        delete charMap[leftChar]
+      }
+      start += 1
+    }
+
+    maxLength = Math.max(maxLength, end - start + 1)
+  }
+  return maxLength
+}
+```
