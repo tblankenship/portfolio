@@ -1,0 +1,57 @@
+---
+title: 'Merge Interval Algorithms'
+date: 2022-06-10T15:34:14Z
+lastmod: '2022-06-10'
+tags: ['algorithms', 'data-structures', 'javascript']
+draft: false
+summary: 'Overlapping intervals'
+---
+
+## Ex 1:
+
+Given a list of intervals (two ranges), merge all overlapping intervals to produce a list that has mutually exclusive intervals.
+
+```javascript
+class Interval {
+  constructor(start, end) {
+    this.start = start
+    this.end = end
+  }
+
+  get_interval() {
+    return '[' + this.start + ', ' + this.end + ']'
+  }
+}
+
+const merge = function (intervals) {
+  // If only one interval, it's merged - return.
+  if (intervals.length < 2) {
+    return intervals
+  }
+
+  // sort the intervals on the start time
+  intervals.sort((a, b) => a.start - b.start)
+
+  const mergedIntervals = []
+
+  // Begin with lowest start interval
+  let start = intervals[0].start,
+    end = intervals[0].end
+  for (i = 1; i < intervals.length; i++) {
+    const interval = intervals[i]
+    // If next interval's end overlaps with the start
+    if (interval.start <= end) {
+      end = Math.max(end, interval.end)
+    } else {
+      // No overlap, add the current start/end interval and reset with current values
+      mergedIntervals.push(new Interval(start, end))
+      start = interval.start
+      end = interval.end
+    }
+  }
+  mergedIntervals.push(new Interval(start, end)) // Add final interval
+  return mergedIntervals
+}
+```
+
+Complexity: O(n log n)
