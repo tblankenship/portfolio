@@ -1,0 +1,37 @@
+---
+title: 'Two Pointer Algorithms'
+date: 2022-06-13T20:10:14Z
+lastmod: '2022-06-13'
+tags: ['algorithms', 'data-structures', 'javascript']
+draft: false
+summary: 'Two Points.'
+---
+
+## Ex 1:
+
+Given an array of integers, return indices of the two numbers such that they add up to a specific target. There should be one solution
+
+```javascript
+const twoSum = function (numbers, target) {
+  let start = 0,
+    end = numbers.length - 1,
+    total
+
+  while (start < end) {
+    total = numbers[start] + numbers[end]
+    if (total < target) {
+      start++
+    }
+    if (total > target) {
+      end--
+    }
+    if (total === target) {
+      return [start + 1, end + 1]
+    }
+  }
+  // In case there is no solution
+  return []
+}
+```
+
+Complexity: O(n)

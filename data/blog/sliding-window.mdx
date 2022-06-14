@@ -139,3 +139,37 @@ const get_max_number_of_fruits = function (fruit) {
   }
 }
 ```
+
+# Ex 5:
+
+Longest Repeating Character Replacement
+
+You are given a string of uppercase letters (s) and an integer (k). You can choose any character of the string and change it to any other uppercase English character.
+You can perform this operation at most k times.
+
+```javascript
+var characterReplacement = function (s, k) {
+  let left = 0,
+    right = 0,
+    maxLength = 0,
+    mostFreq = 0,
+    charMap = {}
+
+  // Move the right pointer towards the end of the array
+  while (right < s.length) {
+    charMap[s[right]] = charMap[s[right]] + 1 || 1
+    mostFreq = Math.max(charMap[s[right]], mostFreq)
+
+    while (right - left + 1 - mostFreq > k) {
+      charMap[s[left]]--
+      left++
+    }
+
+    maxLength = Math.max(right - left + 1, maxLength)
+    right++
+  }
+  return maxLength
+}
+```
+
+Complexity: O(n)
