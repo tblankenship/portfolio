@@ -15,7 +15,7 @@ Option 1 (Iterative):
 
 ```python
 class Solution:
-    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+    def reverse_list(self, head: Optional[ListNode]) -> Optional[ListNode]:
 
         prev, current = None, head
 
@@ -34,11 +34,11 @@ Option 2 (Recursive):
 
 ```python
 class Solution:
-    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+    def reverse_list(self, head: Optional[ListNode]) -> Optional[ListNode]:
 
         if not head or not head.next: return head
 
-        newHead = self.reverseList(head.next)
+        newHead = self.reverse_list(head.next)
         # Same as making a temp and swapping the pointer direction
         head.next.next = head
         head.next = None

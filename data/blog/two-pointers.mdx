@@ -48,13 +48,13 @@ Version 1: (Easier, use more mem)
 
 ```python
 class Solution:
-    def isPalindrome(self, s: str) -> bool:
-        fmtString = ""
+    def is_palindrome(self, s: str) -> bool:
+        fmt_string = ""
 
         for c in s:
             if c.isalnum():
-                fmtString += c.lower()
-        return fmtString == fmtString[::-1]
+                fmt_string += c.lower()
+        return fmt_string == fmt_string[::-1]
 ```
 
 Complexity: O(n)
@@ -63,7 +63,7 @@ Version 2: (Use less memory)
 
 ```python
 class Solution:
-  def isPalindrome(self, s: str) -> bool:
+  def is_palindrome(self, s: str) -> bool:
       l, r = 0, len(s) - 1
 
       while l < r:

@@ -15,15 +15,15 @@ Given an integer array nums, return true if any value appears at least twice in 
 
 ```python
 class Solution:
-    def containsDuplicate(self, nums: List[int]) -> bool:
+    def contains_duplicate(self, nums: List[int]) -> bool:
 
-        hashSet = set()
+        hash_set = set()
 
         for n in nums:
-            if n in hashSet:
+            if n in hash_set:
                 return True
             else:
-                hashSet.add(n)
+                hash_set.add(n)
 
         return False
 ```
