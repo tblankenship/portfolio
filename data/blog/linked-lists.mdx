@@ -1,0 +1,47 @@
+---
+title: 'Linked List Algorithms'
+date: 2022-06-15T7:34:14Z
+lastmod: '2022-06-15'
+tags: ['algorithms', 'python']
+draft: false
+summary: 'Linked List Algorithms'
+---
+
+## Ex 1:
+
+[Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)
+
+Option 1 (Iterative):
+
+```python
+class Solution:
+    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+
+        prev, current = None, head
+
+        while current:
+            # Set a temporary pointer to next node
+            temp = current.next
+            current.next = prev
+            prev = current
+            current = temp
+        return prev
+```
+
+Complexity: O(n)
+
+Option 2 (Recursive):
+
+```python
+class Solution:
+    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+
+        if not head or not head.next: return head
+
+        newHead = self.reverseList(head.next)
+        # Same as making a temp and swapping the pointer direction
+        head.next.next = head
+        head.next = None
+
+        return newHead
+```
