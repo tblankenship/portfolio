@@ -1,0 +1,237 @@
+---
+title: 'Tree Algorithms'
+date: 2022-06-18T11:29:14Z
+lastmod: '2022-06-14'
+tags: ['algorithms', 'python']
+draft: false
+summary: 'Tree Algorithms'
+---
+
+## Ex 1:
+
+[Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/submissions/)
+
+```python
+class Solution:
+    def invertTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
+        if not root:
+            return None
+
+        temp = root.left
+        root.left = root.right
+        root.right = temp
+
+        self.invertTree(root.left)
+        self.invertTree(root.right)
+
+        return root
+```
+
+Complexity: O(n)
+
+## Ex 2:
+
+[Maxiumum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
+
+Recursion:
+
+```python
+class Solution:
+    def maxDepth(self, root: Optional[TreeNode]) -> int:
+        if not root:
+            return 0
+
+        return 1 + max(self.maxDepth(root.left),self.maxDepth(root.right))
+```
+
+Iterative BFS:
+
+```python
+class Solution:
+    def maxDepth(self, root: Optional[TreeNode]) -> int:
+        if not root:
+            return 0
+
+        level = 0
+        q = deque([root])
+        # Add nodes to the queue, then traverse and add children nodes
+        while q:
+
+            for i in range(len(q)):
+                node = q.popleft()
+                if node.left:
+                    q.append(node.left)
+                if node.right:
+                    q.append(node.right)
+            level += 1
+
+        return level
+```
+
+Iterative DFS:
+
+```python
+class Solution:
+    def maxDepth(self, root: Optional[TreeNode]) -> int:
+        if not root:
+            return 0
+
+        stack = [[root,1]]
+        result = 1
+        while stack:
+            node, depth = stack.pop()
+
+            if node:
+                result = max(depth, result)
+                if node.left:
+                    stack.append([node.left, depth+1])
+                if node.right:
+                    stack.append([node.right, depth+1])
+
+        return result
+```
+
+## Ex 3:
+
+[Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/)
+
+```python
+class Solution:
+    def diameterOfBinaryTree(self, root: Optional[TreeNode]) -> int:
+        # Global 0
+        result = [0]
+
+        def dfs(root):
+            if not root:
+                # Height of empty tree is -1
+                return -1
+            # Recursively find height of subtrees
+            left = dfs(root.left)
+            right = dfs(root.right)
+
+            result[0] = max(result[0], 2 + left + right)
+
+            return 1 + max(left, right)
+
+        dfs(root)
+        return result[0]
+```
+
+Complexity: O(n)
+
+## Ex 4:
+
+[Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/)
+
+```python
+class Solution:
+    def isBalanced(self, root: Optional[TreeNode]) -> bool:
+
+        def dfs(root):
+            if not root: return [True, 0]
+
+            left = dfs(root.left)
+            right = dfs(root.right)
+
+            balanced = left[0] and right[0] and abs(left[1] - right[1]) <= 1
+
+            return [balanced, 1 + max(left[1], right[1])]
+
+        return dfs(root)[0]
+```
+
+Complexity: O(n)
+
+## Ex 5:
+
+[Same Tree](https://leetcode.com/problems/same-tree/)
+
+```python
+class Solution:
+    def isSameTree(self, p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:
+        if not p and not q:
+            return True
+        if not p or not q:
+            return False
+        if p.val != q.val:
+            return False
+
+        return (self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right))
+
+    ###### Another option ( I think a little more clear) ######
+    def isSameTree(self, l: Optional[TreeNode], r: Optional[TreeNode]) -> bool:
+        if not l and not r:
+            return True
+        if l and r and l.val == r.val:
+            return (self.isSameTree(l.left, r.left) and self.isSameTree(l.right, r.right))
+        return False
+
+```
+
+Complexity: O(n)
+
+## Ex 6:
+
+[Same Tree](https://leetcode.com/problems/same-tree/)
+
+```python
+class Solution:
+    def isSameTree(self, p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:
+        if not p and not q:
+            return True
+        if not p or not q:
+            return False
+        if p.val != q.val:
+            return False
+
+        return (self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right))
+```
+
+Complexity: O(n)
+
+## Ex 7:
+
+[Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/)
+
+```python
+class Solution:
+    def isSubtree(self, root: Optional[TreeNode], subRoot: Optional[TreeNode]) -> bool:
+        if not subRoot:
+            return True
+        if not root:
+            return False
+
+        if self.is_same_tree(root, subRoot):
+            return True
+
+        return (self.isSubtree(root.left, subRoot) or self.isSubtree(root.right, subRoot))
+
+
+    def is_same_tree(self, l, r):
+        if not l and not r:
+            return True
+        if l and r and l.val == r.val:
+            return (self.is_same_tree(l.left, r.left) and self.is_same_tree(l.right, r.right))
+        return False
+```
+
+Complexity : O(n)
+
+## Ex 8.
+
+[Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
+
+```python
+class Solution:
+    def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
+        current = root
+
+        while current:
+
+            if p.val > current.val and q.val > current.val:
+                current = current.right
+            elif p.val < current.val and q.val < current.val:
+                current = current.left
+            else:
+                return current
+```
