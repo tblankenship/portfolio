@@ -1,26 +1,12 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Github, Linkedin, Mail, MapPin } from "lucide-react"
 import { AnimatedContent } from "../components/AnimatedContent"
+import ClientStarBackground from "@/components/ClientStarBackground"
 
 export default function AboutPage() {
   return (
-    <div className="dark min-h-screen bg-black text-white relative">
-      <div
-        className="absolute top-0 left-0 w-full h-full bg-[#050505]"
-        style={{
-          backgroundImage: `
-          linear-gradient(
-            to bottom,
-            #050505,
-            transparent 5%,
-            transparent 95%,
-            #050505
-          ),
-          radial-gradient(circle at center, #ffffff30 1px, transparent 1px)
-        `,
-          backgroundSize: "100% 100%, 50px 50px",
-        }}
-      />
+    <div className="dark min-h-screen bg-black text-white relative overflow-hidden">
+      <ClientStarBackground />
       <AnimatedContent>
         <div className="overflow-hidden border-0">
           <div className="p-6">
