@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Thad Blankenship | Software Engineer",
   description:
-    "Product-focused software engineer based in Dallas, TX. Experienced in TypeScript, React, React Native, AI, UI/UX, and Open Source.",
+    "Product-focused software engineer based in Dallas, TX. Experienced in TypeScript, React, React Native, AI, UI/UX, and cloud infrastructure.",
   keywords: [
     "Thad Blankenship",
     "Software Engineer",
@@ -26,6 +26,7 @@ export const metadata: Metadata = {
     "UI/UX",
     "Open Source",
     "Dallas",
+    "Cloud Infrastructure",
   ],
   authors: [
     { name: "Thad Blankenship", url: "https://github.com/tblankenship" },
@@ -43,7 +44,7 @@ export const metadata: Metadata = {
     url: "https://tblankenship.dev",
     title: "Thad Blankenship | Software Engineer",
     description:
-      "Product-focused software engineer based in Dallas, TX. Experienced in TypeScript, React, React Native, AI, UI/UX, and Open Source.",
+      "Product-focused software engineer based in Dallas, TX. Experienced in TypeScript, React, React Native, AI, UI/UX, and cloud infrastructure.",
     siteName: "Thad Blankenship",
     images: [
       {
@@ -58,7 +59,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Thad Blankenship | Software Engineer",
     description:
-      "Product-focused software engineer based in Dallas, TX. Experienced in TypeScript, React, React Native, AI, UI/UX, and Open Source.",
+      "Product-focused software engineer based in Dallas, TX. Experienced in TypeScript, React, React Native, AI, UI/UX, and cloud infrastructure.",
     images: ["/og-image.png"],
     creator: "@thaddblank",
   },
