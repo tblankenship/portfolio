@@ -12,7 +12,7 @@ export default function AboutPage() {
           <div className="p-6">
             <div className="flex flex-col items-center text-center space-y-4">
               <Avatar className="h-24 w-24">
-                <AvatarImage src="/thb.jpg" alt="Profile picture" />
+                <AvatarImage src="/thb.png" alt="Profile picture" />
                 <AvatarFallback>TB</AvatarFallback>
               </Avatar>
 
