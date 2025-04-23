@@ -64,21 +64,21 @@ export default function AboutPage() {
                 <div className="flex justify-center space-x-4">
                   <a
                     href="https://github.com/tblankenship"
-                    className="text-zinc-400 hover:text-white transition-colors"
+                    className="text-zinc-400 hover:text-white transition-colors cursor-pointer duration-300"
                     aria-label="GitHub"
                   >
                     <Github className="h-6 w-6" />
                   </a>
                   <a
                     href="https://linkedin.com/in/thaddeusb"
-                    className="text-zinc-400 hover:text-white transition-colors"
+                    className="text-zinc-400 hover:text-white transition-colors cursor-pointer duration-300"
                     aria-label="LinkedIn"
                   >
                     <Linkedin className="h-6 w-6" />
                   </a>
                   <a
                     href="mailto:thaddeusblankenship@gmail.com"
-                    className="text-zinc-400 hover:text-white transition-colors"
+                    className="text-zinc-400 hover:text-white transition-colors cursor-pointer duration-300"
                     aria-label="Email"
                   >
                     <Mail className="h-6 w-6" />
